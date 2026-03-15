@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Addison Cho">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>Checkout</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!--
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    -->
+</head>
+<body>
+    <header>
+        <img id="logo" src="../static/monomuse_logo_xl.png" alt="MonoMuse Museum Logo">
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <a id="navselected" href="checkout.html">Checkout</a>
+        </nav>
+
+    </header>
+
+    <div class="main">
+        <form action="/transactions.php" method="get">
+            <label for="name">Full Name (required):</label>
+            <input type="text" id="name" name="name"><br><br>
+            
+            <label for="email">Email (required):</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="ticket_quantity">Ticket Quantity (required):</label>
+
+            <select id="ticket_quantity" name="ticketq">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <br>
+    
+    <footer>&copy; 2026 MonoMuse. All rights reserved.</footer>
+</body>
+</html>
