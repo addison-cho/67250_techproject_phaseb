@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Addison Cho">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>About</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <header>
+        <img id="logo" src="../static/monomuse_logo_xl.png" alt="MonoMuse Museum Logo">
+        <nav>
+            <a href="../index.html">Home</a>
+            <a id="navselected" href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <img src="../static/museum.png" alt="Outside MonoMuse museum" width="600">
+
+        <h3>Mission Statement</h3>
+        <p>
+            MonoMuse exists to give ordinary objects a moment of attention they would never receive anywhere else. By collecting and displaying items most people would normally throw away—old receipts, ticket stubs, instruction manuals, and other small artifacts—the museum invites visitors to reconsider the quiet role everyday objects play in documenting daily life. With a mix of curiosity and gentle humor, MonoMuse treats the mundane with the same seriousness usually reserved for masterpieces.
+        </p>
+
+        <h3>Milestones</h3>
+        <ul>
+            <li>
+                <h4>2026 - Founding and Opening</h4>
+                <p>MonoMuse opens with a small but committed collection of everyday items, including its first featured object: a slightly faded grocery receipt from 1982.</p>
+            </li>
+            <li>
+                <h4>2028 - The Everyday Archive</h4>
+                <p>
+                    The museum launches a public archive where visitors can donate their own unremarkable objects, quickly filling the collection with ticket stubs, packaging, manuals, and forgotten notes.
+                </p>
+            </li>
+            <li>
+                <h4>2032 - Community Object Project</h4>
+                <p>
+                    MonoMuse begins accepting objects submitted with short personal stories, proving that even the most ordinary items can carry unexpected meaning.
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <p id="copyYear"></p>
+    </footer>
+</body>
+</html>

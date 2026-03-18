@@ -1,0 +1,109 @@
+:root {
+    --black: #1A1E26;
+    --grey: #343b4a;
+    --white: #E2E6EE;
+    --lightblue: #8AAFD4;
+    --darkblue: #6B8FBF;
+}
+
+* {
+    padding: 5px;
+    margin: 5px;
+    background: var(--black);
+    color: var(--white);
+    font-family: "Roboto", sans-serif;
+
+    font-optical-sizing: auto;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+#logo {
+    width: 60%;
+    display: block;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--lightblue);
+    font-weight: 400;
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    border-color: var(--lightblue)
+}
+
+nav a:hover {
+    background-color: var(--grey);
+}
+
+#navselected {
+    background-color: var(--lightblue);
+    color: var(--black);
+}
+
+.cta {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 400;
+    padding: 8px 50px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: var(--white);
+    background-color: var(--darkblue);
+}
+
+.cta:hover {
+    background-color: var(--grey);
+}
+
+footer {
+    border-top: 1px solid var(--grey);
+    padding: 18px 16px;
+    text-align: center;
+    color: var(--darkblue);
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: fit-content;
+    font-weight: bold;
+}
+
+tr:nth-child(even) td {
+    color: var(--white);
+    background-color: var(--grey);
+}
+
+form * {
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5em;
+    font-family: "Fraunces", serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 4em;
+    font-family: "Fraunces", serif;
+}
+
+h3 {
+    font-size: 3em;
+    font-family: "Fraunces", serif;
+    font-style: italic;
+}
+
+h4 {
+    font-size: 2em;
+    font-family: "Intel", sans-serif;
+}
+
+h5 {
+    font-size: 1em;
+    font-family: "Intel", sans-serif;
+}

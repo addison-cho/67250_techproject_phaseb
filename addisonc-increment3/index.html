@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Addison Cho">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    
+    <title>MonoMuse</title>
+
+    <link rel="stylesheet" href="./static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <script src="./static/script.js" defer></script>
+
+</head>
+<body onload="addYear()">
+
+    <header>
+        <img id="logo" src="./static/monomuse_logo_xl.png" alt="MonoMuse Museum Logo"> 
+    
+        <nav>
+            <a id="navselected" href="index.html">Home</a>
+            <a href="views/explore.html">Explore</a>
+            <a href="views/exhibitions.html">Exhibitions</a>
+            <a href="views/tickets.html">Buy Tickets</a>
+            <a href="views/checkout.html">Checkout</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <h2 id="greeting">Welcome to the MonoMuse Museum</h2>
+
+        <h2>
+            MonoMuse is a contemporary museum dedicated to celebrating the overlooked details of everyday life. Through thoughtfully curated exhibitions and rotating collections, MonoMuse explores the quiet stories behind ordinary objects—from a faded receipt from 1982 to a worn bus ticket or a handwritten grocery list. By presenting these seemingly mundane items in a museum setting, MonoMuse invites visitors to reconsider what makes an object meaningful and how everyday artifacts can reflect culture, memory, and human experience. Whether you are a first-time visitor or a returning guest, our exhibitions offer a fresh perspective on the extraordinary stories hidden within the unremarkable.
+        </h2>
+
+        <a class="cta" href="views/tickets.html">Buy Tickets</a>
+    </div>
+
+    <br>
+    <footer>
+        <p id="copyYear"></p>
+    </footer>
+</body>
+</html>
