@@ -1,0 +1,278 @@
+:root {
+    --black: #1A1E26;
+    --grey: #343b4a;
+    --white: #E2E6EE;
+    --lightblue: #8AAFD4;
+    --darkblue: #6B8FBF;
+
+    --rgbwhite: rgba(226, 230, 238, 20%);
+    --rgblightblue: rgba(138, 175, 212, 40%);
+    --rgbdarkblue: rgba(107, 143, 191, 40%);
+}
+
+body {
+    background: var(--black);
+
+    margin: 0px;
+    padding: 0px;
+}
+
+body.home {
+    background-image:url("museum.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body.else {
+    background-image:url("museum.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+* {
+    color: var(--white);
+    font-family: "Roboto", sans-serif;
+
+    font-optical-sizing: auto;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+#logo {
+    width: 60%;
+    display: block;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--lightblue);
+    font-weight: 400;
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    border-color: var(--lightblue);
+    background: var(--black);
+    
+    margin: 5px;
+    padding: 5px;
+}
+
+nav a:hover {
+    background-color: var(--grey);
+}
+
+.active {
+    background-color: var(--lightblue);
+    color: var(--black);
+}
+
+/* here */
+a:hover .active {
+    background-color: var(--lightblue);
+}
+
+.interactive {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 400;
+    padding: 8px 50px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: var(--white);
+    background-color: var(--darkblue);
+}
+
+.interactive:hover {
+    background-color: var(--grey);
+}
+
+/* .cta {
+
+}
+
+.cta:hover {
+    
+} */
+
+footer {
+    border-top: 1px solid var(--grey);
+    padding: 18px 16px;
+    text-align: center;
+    background-color: var(--black);
+    /* color: var(--darkblue); */
+    background-size: cover;
+    grid-area: footer;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: fit-content;
+    font-weight: bold;
+}
+
+tr:nth-child(even) td {
+    color: var(--white);
+    background-color: var(--grey);
+}
+
+form * {
+    margin: auto;
+    text-align: center;
+}
+
+/* CSS GRID LAYOUT */
+.container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'nav_bar'
+    'main'
+    'footer';
+}
+
+.main--home {
+    grid-template-areas:   /* Defines the layout structure */
+    'center center'
+    'left right';
+}
+
+.main--about {
+    grid-template-areas:
+    'left right'
+    'center center';
+}
+
+.main--exhibitions {
+    grid-template-areas:
+    'title'
+    'content';
+}
+
+.main--tickets {
+    grid-template-areas: 
+    'left right';
+}
+
+/* Places each element into the correct area of the grid */
+.header {
+    background: var(--black);
+    border-bottom: var(--lightblue) 3px solid;
+    grid-area: header; 
+    background-size: cover;
+    display: flex;
+}
+.nav_bar {
+   grid-area: nav_bar; 
+   display: flex;
+   justify-content: left;
+   background-color: var(--black);
+}
+
+.main {
+    display:grid;
+    grid-area: main;
+}
+
+.main * {    
+    margin: 15px;
+    padding: 2px;
+}
+
+.main-center {
+    grid-area: center;
+}
+.main-left {
+    grid-area: left;
+}
+.main-right {
+    grid-area: right;
+}
+.title {
+    grid-area: title;
+}
+.title {
+    grid-area: title;
+}
+
+.exhibition-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-area: content;
+}
+
+.exhib {
+    width: 25%;
+}
+
+#ex1 {
+    margin-right: auto;
+}
+
+#ex2 {
+    margin: auto;
+}
+
+#ex3 {
+    margin-left: auto;
+}
+
+
+/* CSS FLEXBOX LAYOUT */
+.nav_bar {
+   grid-area: nav_bar;
+   display: flex; /* Uses Flexbox for internal layout */
+   justify-content: left;   /* Right aligns the content */
+}
+
+/* TYPOGRAPHY */
+h1 {
+    font-size: 5em;
+    font-family: "Fraunces", serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 4em;
+    font-family: "Fraunces", serif;
+}
+
+h3 {
+    font-size: 2em;
+    font-family: "Fraunces", serif;
+    font-style: italic;
+}
+
+h4 {
+    font-size: 1em;
+    font-family: "Intel", sans-serif;
+}
+
+h5 {
+    font-size: .5em;
+    font-family: "Intel", sans-serif;
+}
+
+/* SEE MORE STUFF */
+#not_here, #readLess, #purchase-panel {
+    display: none;
+}
+
+/* MY DECORATIVE ADD-ONS */
+
+/*glassmorphism panels*/
+.panel {
+    background: linear-gradient(45deg, var(--rgbwhite) 50%, var(--rgblightblue) 100%);
+    border-radius: 16px;
+    
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(1000px);
+
+    border-color: var(--lightblue);
+    border-width: 5px solid;
+
+    margin: 20px;
+}
