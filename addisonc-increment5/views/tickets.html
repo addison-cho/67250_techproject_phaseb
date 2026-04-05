@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Addison Cho">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>Tickets</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <script src="../static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
+</head>
+<body onload="addYear()" class="else">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuse_logo_xl.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <div class="hamburger">
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i> 
+                </a>
+                <h3>Menu</h3>
+            </div>
+
+            <div class="nav_links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Buy Tickets</a>
+                <a href="donate.html">Get Involved</a>
+            </div>
+        </nav>
+        
+        <main class="main main--tickets">
+            <div class="main-left panel">
+                <!-- nts: add cal -->
+            </div>
+            <div class="main-right panel">
+                <table>
+                    <tr>
+                        <th><h2>Ticket Type</h2></th>
+                        <th><h2>Price</h2></th>
+                        <th><h2>Quantity</h2></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>General Admission</h3>
+                            <p>Access to all exhibitions and events for one day.</p>
+                        </td>
+                        <td>$5</td>
+                        <td>
+                            <select id="ticketq-general" name="ticketq">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Student Admission</h3>
+                            <p>Access to all exhibitions and events for one day.</p>
+                        </td>
+                        <td>$15</td>
+                        <td>
+                            <select id="ticketq-student" name="ticketq">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Member Admission</h3>
+                            <p>Access to all exhibitions and events for one year.</p>
+                        </td>
+                        <td>$100</td>
+                        <td>
+                            <select id="ticketq-member" name="ticketq">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+                <button id="buyNow" class="interactive">Buy Now</button>
+            </div>
+
+            <div id="purchase-panel" class="main-center panel">
+                <form id="purchase-form" action="/transactions.php" method="get">
+                <label for="name">Full Name (required):</label>
+                <input type="text" id="name" name="name"><br><br>
+                
+                <label for="email">Email (required):</label>
+                <input type="email" id="email" name="email"><br><br>
+                </form>
+
+                <button id="submit" class="interactive" onclick="submitForm()">
+                    Submit
+                </button>
+            </div>
+        </main>
+        
+        <br>
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>

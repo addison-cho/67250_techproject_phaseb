@@ -1,0 +1,383 @@
+    /* Universal */
+
+    :root {
+        --black: #1A1E26;
+        --grey: #343b4a;
+        --white: #E2E6EE;
+        --lightblue: #8AAFD4;
+        --darkblue: #6B8FBF;
+
+        --rgbwhite: rgba(226, 230, 238, 20%);
+        --rgblightblue: rgba(138, 175, 212, 40%);
+        --rgbdarkblue: rgba(107, 143, 191, 40%);
+    }
+
+    * {
+        color: var(--lightblue);
+        font-family: "Roboto", sans-serif;
+
+        font-optical-sizing: auto;
+        line-height: 1.5;
+    }
+
+    #logo {
+        width: 60%;
+        display: block;
+    }
+
+    /* Body */
+
+    body {
+        background: var(--black);
+        margin: 0px;
+        padding: 0px;
+        max-width: 100vw;
+    }
+
+    #greeting {
+        color: var(--white);
+    }
+
+    #image-header {
+        width: 100%;
+        height: 75vh;
+
+        margin: 0px;
+        padding: 0px;
+
+        background-image: url("museum.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+
+        color: var(--white);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #panel-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* CSS GRID LAYOUT */
+    .container {
+    display: grid;
+    grid-template-areas:
+        'header'
+        'nav_bar'
+        'main'
+        'footer';
+    }
+
+    .main {
+        display:grid;
+        grid-area: main;
+    }
+
+    .main * {    
+        margin: 15px;
+        padding: 2px;
+    }
+
+    .main--home {   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+    }
+
+    #logo {
+            width: auto;
+            height: 100%;
+            display: block;
+        }
+
+    @media (min-width: 651px) {
+        .main--about {
+            grid-template-areas:
+            'left right'
+        }
+
+        .main--tickets {
+            grid-template-areas: 
+            'left right'
+            'center center';
+        }
+    }
+
+    .main--exhibitions {
+        grid-template-areas:
+        'title'
+        'content';
+    }
+
+    .main-center {
+        grid-area: center;
+    }
+    .main-left {
+        grid-area: left;
+    }
+    .main-right {
+        grid-area: right;
+    }
+
+    .header {
+        background: var(--black);
+        border-bottom: var(--lightblue) 3px solid;
+        grid-area: header; 
+        background-size: cover;
+        display: flex;
+        height: 15vh;
+    }
+
+    /* Navigation Bar */
+    .nav_bar {
+        grid-area: nav_bar; 
+        background-color: var(--black);
+        border-bottom: var(--lightblue) 3px solid;
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .hamburger a.icon {
+        text-decoration: none;
+        color: var(--lightblue);
+        background: var(--black);
+        
+        font-weight:900px;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        width: 100%;
+        margin: auto;
+    }
+
+    .nav_links a {
+        flex-direction: row;
+        display: flex;
+        justify-content: left;
+
+
+        text-decoration: none;
+        color: var(--lightblue);
+        border: 2px solid;
+        border-radius: 12px;
+        border-color: var(--lightblue);
+        background: var(--black);
+        
+        font-size: 1.1em;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .nav_links a:hover {
+        background-color: var(--grey);
+    }
+
+    .nav_links a.active {
+        background-color: var(--lightblue);
+        color: var(--black);
+    }
+
+    .nav_links a.active:hover {
+        background-color: var(--darkblue);
+    }
+
+    #map { height: 500px; }
+
+    /* Exhibition Page */
+    .title {
+        grid-area: title;
+    }
+
+
+    @media (min-width: 769px) { 
+        .exhibition-container {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-area: content; 
+        }
+
+        .exhib {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30vw;
+            grid-column: 1;
+        }
+
+        #ex1 {
+            grid-row: 1 / span 2;
+            margin-right: auto;
+        }
+
+        #ex2 {
+            grid-row: 2 / span 2;
+            margin: auto;
+        }
+
+        #ex3 {
+            grid-row: 3 / span 2;
+            margin-left: auto;
+        }
+    }
+
+
+
+    .interactive {
+        text-decoration: none;
+        color: var(--white);
+        font-weight: 400;
+        padding: 10px 10px;
+        border: 2px solid;
+        border-radius: 5px;
+        border-color: var(--white);
+        background-color: var(--darkblue);
+    }
+
+    .interactive:hover {
+        background-color: var(--grey);
+    }
+
+    footer {
+        border-top: 1px solid var(--grey);
+        padding: 18px 16px;
+        text-align: center;
+        background-color: var(--black);
+        /* color: var(--darkblue); */
+        background-size: cover;
+        grid-area: footer;
+    }
+
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        width: fit-content;
+        font-weight: bold;
+    }
+
+    tr:nth-child(even) td {
+        color: var(--white);
+        background-color: var(--grey);
+    }
+
+    form * {
+        margin: auto;
+        text-align: center;
+    }
+
+    /* TYPOGRAPHY */
+    h1 {
+        font-size: 5em;
+        font-family: "Fraunces", serif;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 4em;
+        font-family: "Fraunces", serif;
+    }
+
+    h3 {
+        font-size: 2em;
+        font-family: "Fraunces", serif;
+        font-style: italic;
+    }
+
+    h4 {
+        font-size: 1em;
+        font-family: "Intel", sans-serif;
+    }
+
+    h5 {
+        font-size: .5em;
+        font-family: "Intel", sans-serif;
+    }
+
+    /* SEE MORE STUFF */
+    #not_here, #readLess, #purchase-panel {
+        display: none;
+    }
+
+    /* MY DECORATIVE ADD-ONS */
+
+    /*glassmorphism panels*/
+    .panel {
+        background: linear-gradient(45deg, var(--rgbwhite) 50%, var(--rgblightblue) 100%);
+        border-radius: 16px;
+        
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(1000px);
+
+        border-color: var(--lightblue);
+        border-width: 5px solid;
+
+        margin: 20px;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 650px) {
+        .nav_links { display: none; }
+
+        .nav_links.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hamburger {
+            display: flex;
+            margin: auto;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;        
+        }
+
+        .hamburger * {
+        margin: 5px;    
+        }
+
+        .main--about {
+            grid-template-areas:
+            'left left'
+            'right right';
+        }
+
+        .main--tickets {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .exhibition-container {
+            display: flex;
+            flex-direction: column;
+            grid-area: content;
+        }
+
+        .exhib {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        #ex1, #ex2, #ex3 {
+            margin: auto;   
+        }
+    }
