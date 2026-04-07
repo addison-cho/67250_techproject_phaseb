@@ -1,0 +1,509 @@
+/* Universal */
+
+:root {
+    --black: #1A1E26;
+    --grey: #343b4a;
+    --white: #E2E6EE;
+    --lightblue: #8AAFD4;
+    --darkblue: #6B8FBF;
+
+    --rgbwhite: rgba(226, 230, 238, 20%);
+    --rgblightblue: rgba(138, 175, 212, 40%);
+    --rgbdarkblue: rgba(107, 143, 191, 70%);
+}
+
+* {
+    color: var(--white);
+    font-family: "Roboto", sans-serif;
+
+    font-optical-sizing: auto;
+    line-height: 1.5;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+#logo {
+    width: 100%;
+    display: block;
+}
+
+body {
+    background: var(--black);
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+/* Typography */
+h1 {
+    color: var(--white);
+    font-size: 5em;
+    font-family: "Fraunces", serif;
+    font-weight: bold;
+}
+
+h2, th {
+    font-size: 2em;
+    font-family: "Fraunces", serif;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-family: "Fraunces", serif;
+    font-style: italic;
+}
+
+h4, p, label {
+    font-size: 1em;
+    font-family: "Intel", sans-serif;
+    font-weight: 200;
+}
+
+h5 {
+    font-size: 1em;
+    font-family: "Intel", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+h6 {
+    font-size: .5em;
+    font-family: "Intel", sans-serif;
+}
+
+#logo {
+    width: auto;
+    height: 100%;
+    display: block;
+}
+
+/* Buttons to hide/show content */
+#not_here, #readLess, #purchase-panel {
+    display: none;
+}
+
+/* Interactive buttons that are not navigational links */
+/* For example, buttons to hide/show content */
+a.interactive, button.interactive {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 400;
+
+    padding: 10px 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: var(--white);
+    background-color: var(--darkblue);
+}
+
+a.interactive:hover, button.interactive:hover {
+    background-color: var(--lightblue);
+}
+
+/* CSS Grid Layouts */
+.container {
+    display: grid;
+    grid-template-areas:
+        'header'
+        'nav_bar'
+        'main'
+        'footer';
+    width: 100%;
+}
+
+.main {
+    display: grid;
+    grid-area: main;
+    grid-template-areas:
+    'title'
+    'content';
+    width: 100%;
+}
+
+.main * {    
+    margin: 5px;
+    padding: 2px;
+}
+
+.main--home {   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    width: 100%;
+}
+
+.main--tickets {
+    display: grid;
+    grid-template-areas: 
+    'top'
+    'bottom';
+}
+
+.main--about {
+    display: grid;
+    grid-template-areas:
+    'left right'
+}
+
+.main-top {
+    display: flex;
+    flex-direction: row;
+    grid-area: top;
+    justify-content: center;
+    text-align: center;
+    margin: 0px;
+}
+
+/* CSS Grid Layouts (classes for grid-area) */
+.main-bottom {
+    margin: 0px;
+    padding: 0px;
+    grid-area: bottom;
+}
+.main-center {
+    grid-area: center;
+}
+.main-left {
+    grid-area: left;
+}
+.main-right {
+    grid-area: right;
+}
+.content {
+    grid-area: content;
+}
+
+/* Non-main grid areas */
+.header {
+    background: var(--black);
+    border-bottom: var(--lightblue) 3px solid;
+    grid-area: header; 
+    background-size: cover;
+    display: flex;
+    height: 15vh;
+    width: 100%;
+}
+
+footer {
+    border-top: 1px solid var(--grey);
+    padding: 18px 0px;
+    text-align: center;
+    background-color: var(--black);
+    background-size: cover;
+    grid-area: footer;
+    width: 100%;
+}
+
+/* Navigation Bar */
+
+.nav_bar {
+    grid-area: nav_bar; 
+    background-color: var(--black);
+    border-bottom: var(--lightblue) 3px solid;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Hamburger is for mobile design; navigational links hidden in a menu */
+.hamburger {
+    display: none;
+}
+
+.hamburger a.icon {
+    text-decoration: none;
+    color: var(--lightblue);
+    background: var(--black);
+    
+    font-weight:900px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 100%;
+    margin: auto;
+}
+
+.nav_links a {
+    font-size: 1em;
+    font-family: "Intel", sans-serif;
+
+    flex-direction: row;
+    display: flex;
+    justify-content: left;
+
+    text-decoration: none;
+    color: var(--lightblue);
+    border: 2px solid;
+    border-radius: 12px;
+    border-color: var(--lightblue);
+    background: var(--black);
+    
+    font-size: 1.1em;
+    margin: 5px;
+    padding: 5px;
+}
+
+.nav_links a:hover {
+    background-color: var(--grey);
+}
+
+.nav_links a.active {
+    background-color: var(--lightblue);
+    color: var(--black);
+}
+
+.nav_links a.active:hover {
+    background-color: var(--darkblue);
+}
+
+/* Home Page */
+
+#greeting {
+    color: var(--white);
+}
+
+.image-bg {
+    background-image: url("museum.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+#image-header {
+    width: 100%;
+    height: 75vh;
+
+    margin: 0px;
+    padding: 0px;
+
+    background-image: url("museum.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#panel-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* About Page */
+
+#map {
+    margin: 0;
+    width: 100%;
+    height: 50vh;
+    color:var(--darkblue);
+}
+
+/* Text color of the marker icon */
+.leaflet-popup-content {
+    color: var(--darkblue);
+}
+
+/* Slideshow CSS */
+#slideshow #slides img {
+    display: none;
+    width: 100%;
+    margin: auto;
+    border: 2px solid var(--lightblue);
+}
+
+#slideshow #slides img.active {
+    display: block;
+}
+
+#slide-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+#slide-controls button {
+    background-color: var(--black);
+    color: var(--lightblue);
+    border: 2px solid var(--darkblue);
+    padding: 5px 10px;
+    margin: 0px 5px;
+    border-radius: 5px;
+
+}
+
+#slide-controls button:hover {
+    background-color: var(--grey);
+}
+
+/* YouTube video dimensions */
+iframe {
+    margin: auto;
+    height: 50vh;
+    width: 85%;
+}
+
+/* Exhibition Page */
+
+@media (min-width: 769px) { 
+    /* Strange column and row pattern for a staggered, overlaping effect. */
+    .exhibition-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .exhib {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30vw;
+    }
+
+    .exhib img {
+        width: 95%;
+        border: 2px solid var(--lightblue);
+    }
+
+    #ex1 {
+        grid-row: 1 / span 2;
+        margin-right: auto;
+        grid-column: 1;
+    }
+
+    #ex2 {
+        grid-row: 2 / span 2;
+        margin: auto;
+        grid-column: 2;
+    }
+
+    #ex3 {
+        grid-row: 3 / span 2;
+        grid-column: 3;
+        margin-left: auto;
+    }
+}
+
+/* Tickets Page */
+
+/* When a field is filled out incorrectly, inform the user */
+input.invalid {
+    border: 2px solid red;
+}
+
+/* Table CSS */
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: fit-content;
+    font-weight: bold;
+}
+
+table, th, tr, td {
+    border: 2px solid var(--white);
+}
+
+tr:nth-child(even) td {
+    background-color: var(--lightblue);
+}
+
+tr:nth-child(odd) td {
+    background-color: var(--darkblue);
+}
+
+tr:nth-last-child td {
+    border: transparent;
+    background-color: var(--white);
+}
+
+
+input, select, option {
+    color: var(--darkblue);
+}
+
+form * {
+    margin: auto;
+    text-align: center;
+}
+
+/* Glassmorphism background for div & containers */
+.panel {
+    background: linear-gradient(45deg, var(--rgbwhite) 50%, var(--rgblightblue) 100%);
+    border-radius: 16px;
+    
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(1000px);
+
+    border-color: var(--white);
+    border-width: 5px solid;
+
+    padding: 15px;
+}
+
+/* Mobile Responsiveness */
+
+@media (max-width: 650px) {
+    /* Creates a drop-down menu with the hamburger icon */
+    .nav_links { display: none; }
+
+    .nav_links.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hamburger {
+        display: flex;
+        margin: auto;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .hamburger * {
+        margin: 5px;    
+    }
+
+    /* Changes CSS Grid format to Flexbox */
+    .main--tickets, .main--about, .main-right, .main-left, .main-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main--tickets {
+        width: 95vw;
+        margin: 0px;
+    }
+
+    .exhibition-container {
+        display: flex;
+        flex-direction: column;
+        grid-area: content;
+    }
+
+    .exhib {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #ex1, #ex2, #ex3 {
+        margin: auto;   
+    }
+}

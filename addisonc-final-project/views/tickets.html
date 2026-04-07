@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Addison Cho">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>Buy Tickets</title>
+
+    <!-- general css -->
+    <link rel="stylesheet" href="../static/style.css">
+    <!-- external library for hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- external libraries for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- general javascript -->
+    <script src="../static/script.js" defer></script>
+    <!-- external library for jquery -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
+    <!-- javascript -->
+    <script src="../static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+</head>
+<body onload="addYear()" class="else">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuse_logo_short.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <div class="hamburger">
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i> 
+                </a>
+                <h3>Menu</h3>
+            </div>
+
+            <div class="nav_links">
+                <a href="../index.html">Home</a>
+                <a href="tickets.html">Buy Tickets</a>
+                <a href="about.html">About Us</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="donate.html">Donate</a>
+                <a href="membership.html">Membership</a>
+            </div>
+        </nav>
+        
+        <!-- main class for css grid structure (title, content)-->
+        <main class="main">
+            <div class="title">
+                <h1>Buy Tickets</h1>
+            </div>
+
+            <!-- main--tickets class for css structure -->
+            <!-- image-bg for background image of the museum -->
+            <div class="content main--tickets image-bg">
+                <!-- initial content is on the top row, content revealed later is on the bottom row -->
+                 <!-- main-top class for css flexbox in a row -->
+                <div class="main-top">
+                    <!-- information relevant to ticket purchases is on the left -->
+                    <div class="panel">
+                        <h2>Open Times</h2>
+                        <p>Monday - Friday: 10am - 5pm</p>
+                        <p>Saturday - Sunday: 11am - 6pm</p>
+
+                        <h2>Location</h2>
+                        <p>123 Main Street, Pyttsbourgh, PAA 15213</p>
+                    </div>
+
+                    <!-- table allowing user to select ticket quantities per ticket type -->
+                    <div class="panel">
+                        <table>
+                            <tr>
+                                <th>Ticket Type</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>General Admission</h3>
+                                    <p>Access to all exhibitions and events for one day.</p>
+                                </td>
+                                <td>$18</td>
+                                <td>
+                                    <select class="ticketq" id="ticketq-general" name="ticketq">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Student Admission</h3>
+                                    <p>Access to all exhibitions and events for one day.</p>
+                                </td>
+                                <td>$18</td>
+                                <td>
+                                    <select class="ticketq" id="ticketq-student" name="ticketq">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Member Admission</h3>
+                                    <p>Access to all exhibitions and events for one day.</p>
+                                </td>
+                                <td>$18</td>
+                                <td>
+                                    <select class="ticketq" id="ticketq-member" name="ticketq">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- total is updated everytime a drop-down box from above is changed -->
+                                <td>
+                                    <h3>Your total: </h3>
+                                </td>
+                                <td></td>
+                                <td id="total">$0</td>
+                            </tr>
+                        </table>
+
+                        <!-- BuyNow checks to see if at least one ticket is selected for purchase -->
+                        <!-- If so, it reveals the next step of the checkout process -->
+                        <button id="buyNow" class="interactive">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Last step of the checkout process: entering personal information -->
+                <!-- Invalid fields are highlighted in red after interacting. Submit button will not work until fields are valid. -->
+                <div id="purchase-panel" class="main-bottom panel">
+                    <form id="purchase-form" action="/transactions.php" method="get">
+                    <label for="name">Full Name (required):</label>
+                    <input type="text" id="name" name="name"><br><br>
+                    
+                    <label for="email">Email (required):</label>
+                    <input type="email" id="email" name="email"><br><br>
+
+                    <label for="date">Date Visiting (required):</label>
+                    <input type="date" id="date" name="date"><br><br>
+                    
+                    <label for="number">Zip Code (optional):</label>
+                    <input type="number" id="number" name="zip" min="10000" max="99999"><br><br>
+                    
+                    <label for="checkbox">Would you like to join our mailing list?</label>
+                    <input type="checkbox" id="checkbox" name="mailing-list"><br><br>
+                    </form>
+
+                    <button id="submit" class="interactive" onclick="submitForm()">
+                        Place Order
+                    </button>
+                </div>
+            </div>
+        </main>
+        
+        <br>
+        <footer class="footer">
+            <p id="copyYear"></p>
+            <p>monomuse@gmail.com | (+1) 010-1010-1010</p>
+            <p>The logo, background image, and filler text were generated by ChatGPT. All other images were generated by Gemini.</p>
+        </footer>
+    </div>
+</body>
+</html>
